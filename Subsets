@@ -1,0 +1,29 @@
+class Solution:
+
+    def subsets(self,nums):
+
+        result = [[]]  
+
+
+
+        while nums:
+
+            last_element = nums.pop()  
+
+
+
+            new_subsets = []
+
+            for subset in result:
+
+                new_subsets.append(subset)  
+
+                new_subsets.append(subset + [last_element])  
+
+
+
+            result = new_subsets  
+
+
+
+        return result
